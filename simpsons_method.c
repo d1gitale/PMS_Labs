@@ -29,6 +29,8 @@ int main(void) {
     long double simpsons_method = (step / 3) * (funcs[0] + 4 * lefts_sigma + 2 * middles_sigma + funcs[2 * segments]);
     printf("a: %Lf\nb: %Lf\nE: %Lf\nmax_of_4_derivative: %Lf\nsegments: %d\nstep: %Lf\nlefts_sigma: %Lf\nmiddles_sigma: %Lf\n", down_boundary, up_boundary, error, max_of_fourth_derivative, segments, step, lefts_sigma, middles_sigma);
     printf("Integral value from %Lf to %Lf with error value of %Lf is ~%Lf\n", down_boundary, up_boundary, error, simpsons_method);
+
+    return 0;
 }
 
 
