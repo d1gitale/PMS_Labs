@@ -12,6 +12,11 @@ int main(void) {
     GetInput(&down_boundary, "Enter the down boundary of the integral: ");
     GetInput(&up_boundary,  "Enter the up boundary of the integral: ");
     GetInput(&error, "Enter the error value of the integral: ");
+    if (down_boundary > up_boundary) {
+        long double tmp = up_boundary;
+        up_boundary = down_boundary;
+        down_boundary = tmp;
+    }
 
     long double max_of_fourth_derivative = fabs(fmax(-(6 / pow(down_boundary, 4)), -(6 / pow(up_boundary, 4))));
     int segments = 1 + ceil(pow(((max_of_fourth_derivative * pow((up_boundary - down_boundary), 5)) / (2880 * error)), 0.25));
@@ -35,8 +40,13 @@ int main(void) {
 
 
 int GetInput(long double *var_addr, char *prompt) {
+    int input_successfull;
+
     printf("%s", prompt);
-    while (scanf("%Lf", &*var_addr) != 1) printf("%s", prompt);
+    do {
+        input_successfull = scanf("%Lf", &*var_addr);
+        while (getchar() != '\n');
+    } while (!(input_successfull));
     return 0;
 }
 
