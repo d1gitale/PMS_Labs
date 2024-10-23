@@ -12,8 +12,13 @@ int main (void) {
 }
 
 int GetInput (long double *p_input, char *prompt) {
+    int input_successfull;
+
     printf("%s", prompt);
-    while (scanf("%Lf", &*p_input) != 1) printf("%s", prompt);
+    do {
+        input_successfull = scanf("%Lf", &*p_input);
+        while (getchar() != '\n');
+    } while (!(input_successfull));
     return 0;
 }
 
