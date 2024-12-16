@@ -6,7 +6,6 @@
 typedef struct {
     char *title;
     int students_amount;
-    double max_mean_grade;
     Student *students_array;
 } Course;
 

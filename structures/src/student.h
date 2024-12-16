@@ -2,8 +2,8 @@
 #define STUDENT_H
 
 typedef struct {
-    char* name;
-    uint8_t age;
+    char name[20];
+    short int age;
     double mean_grade;
 } Student;
 
