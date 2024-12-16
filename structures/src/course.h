@@ -6,12 +6,12 @@
 typedef struct {
     char *title;
     int students_amount;
-    uint8_t max_mean_grade;
+    double max_mean_grade;
     Student *students_array;
 } Course;
 
 int add_student(Student *student);
 
-Student* find_best_student(int id);
+Student* find_best_student(void);
 
 #endif

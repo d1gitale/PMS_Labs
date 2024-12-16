@@ -4,10 +4,10 @@
 typedef struct {
     char* name;
     uint8_t age;
-    uint8_t mean_grade;
+    double mean_grade;
 } Student;
 
-void change_mean_grade(Student *student);
+void change_mean_grade(Student *student, double grade);
 
 int is_perfectionist(Student *student);
 
