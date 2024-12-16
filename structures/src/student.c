@@ -8,5 +8,5 @@ int change_mean_grade(Student *student, double grade) {
 }
 
 int is_perfectionist(Student *student) {
-    return student->mean_grade >= 8.6;
+    return student->mean_grade >= 8.6 && student->mean_grade <= 10;
 }
