@@ -7,7 +7,7 @@ typedef struct {
     double mean_grade;
 } Student;
 
-void change_mean_grade(Student *student, double grade);
+int change_mean_grade(Student *student, double grade);
 
 int is_perfectionist(Student *student);
 
