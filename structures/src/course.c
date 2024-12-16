@@ -10,9 +10,9 @@ int add_student(Course *course, Student *student) {
             return 1;
         }
     }
-    
+
     course->students_array[course->students_amount++] = *student;
-    return course->students_amount;
+    return course->students_amount - 1;
 }
 
 Student* find_best_student(Course *course) {

@@ -61,7 +61,8 @@ int main(void) {
             printf("Enter new mean grade: ");
             double mean; scanf("%lf", &mean);
             if (id < course->students_amount) {
-                change_mean_grade(&course->students_array[id], mean);
+                int res = change_mean_grade(&course->students_array[id], mean);
+                if (res == -1) printf("Invalid mean grade\n");
             } else printf("No such student\n");
         } 
         else if (strcmp(command, "4") == 0) {
