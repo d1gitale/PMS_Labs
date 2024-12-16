@@ -10,8 +10,8 @@ typedef struct {
     Student *students_array;
 } Course;
 
-int add_student(Student *student);
+int add_student(Course *course, Student *student);
 
-Student* find_best_student(void);
+Student* find_best_student(Course *course);
 
 #endif

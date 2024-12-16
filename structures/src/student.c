@@ -1,5 +1,4 @@
 #include "student.h"
-#include <stdio.h>
 
 void change_mean_grade(Student *student, double grade) {
     student->mean_grade = grade;
